@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ROBIN.COM - 智能体量化投资平台</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:"PingFang SC","Microsoft YaHei",sans-serif;background:#0a1628;color:#fff;min-height:100vh}
+.header{background:linear-gradient(135deg,#0a1628 0%,#1a2a4a 100%);padding:20px 40px;display:flex;justify-content:space-between;align-items:center;border-bottom:2px solid #c9a227}
+.logo{font-size:24px;font-weight:800;color:#c9a227;letter-spacing:2px}
+.logo span{color:#fff}
+.nav{display:flex;gap:30px}
+.nav a{color:#8ba3c7;text-decoration:none;font-size:14px;transition:color .3s}
+.nav a:hover{color:#c9a227}
+.hero{background:linear-gradient(135deg,#0d1f35 0%,#162035 100%);padding:60px 40px;text-align:center;border-bottom:1px solid #1a2a4a}
+.hero h1{font-size:48px;color:#c9a227;margin-bottom:15px;letter-spacing:3px}
+.hero p{color:#8ba3c7;font-size:18px;margin-bottom:30px}
+.stats{display:flex;justify-content:center;gap:60px;margin-top:40px}
+.stat{text-align:center}
+.stat-value{font-size:36px;font-weight:700;color:#c9a227}
+.stat-label{font-size:13px;color:#5a6a7a;margin-top:5px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px;padding:40px;max-width:1400px;margin:0 auto}
+.card{background:#162035;border-radius:12px;padding:25px;border:1px solid #1a2a4a;transition:transform .3s,border-color .3s}
+.card:hover{border-color:#c9a227;transform:translateY(-3px)}
+.card h2{color:#c9a227;font-size:16px;margin-bottom:15px;padding-bottom:10px;border-bottom:1px solid #1a2a4a}
+.card-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.metric{background:#0d1f35;border-radius:8px;padding:12px;text-align:center}
+.metric-value{font-size:20px;font-weight:700;color:#fff}
+.metric-label{font-size:11px;color:#5a6a7a;margin-top:3px}
+.up{color:#ef5350}
+.down{color:#26a69a}
+.signal{padding:12px;background:#0d1f35;border-radius:8px;margin-bottom:8px}
+.signal-type{font-size:13px;font-weight:700;margin-bottom:4px}
+.signal-stocks{font-size:12px;color:#8ba3c7;margin-top:4px}
+.signal-reason{font-size:11px;color:#5a6a7a;margin-top:3px}
+.team{display:flex;gap:20px;flex-wrap:wrap;margin-top:10px}
+.member{background:#0d1f35;border-radius:8px;padding:15px;flex:1;min-width:200px}
+.member-name{color:#c9a227;font-size:14px;font-weight:700}
+.member-role{font-size:12px;color:#8ba3c7;margin-top:4px}
+.member-desc{font-size:11px;color:#5a6a7a;margin-top:4px}
+.risk{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.risk-item{background:#0d1f35;border-radius:8px;padding:15px;text-align:center}
+.risk-status{font-size:18px;font-weight:700;color:#26a69a}
+.risk-label{font-size:11px;color:#5a6a7a;margin-top:4px}
+.footer{background:#0d1f35;padding:30px;text-align:center;border-top:1px solid #1a2a4a;margin-top:40px}
+.footer p{color:#5a6a7a;font-size:12px;line-height:2}
+.footer .brand{color:#c9a227;font-size:16px;font-weight:700;margin-bottom:10px}
+.data-source{background:#162035;padding:15px 40px;display:flex;justify-content:space-between;font-size:12px;color:#5a6a7a;border-top:1px solid #1a2a4a}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="logo">ROBIN<span>.COM</span></div>
+  <nav class="nav">
+    <a href="#">首页</a>
+    <a href="#strategies">策略</a>
+    <a href="#signals">信号</a>
+    <a href="#team">团队</a>
+    <a href="#risk">风控</a>
+    <a href="#contact">联系</a>
+  </nav>
+</div>
+
+<div class="hero">
+  <h1>智能体量化投资平台</h1>
+  <p>第七维度智能体矩阵 | 全球市场覆盖 | 24/7智能运行</p>
+  <div class="stats">
+    <div class="stat"><div class="stat-value">4</div><div class="stat-label">核心智能体</div></div>
+    <div class="stat"><div class="stat-value">3</div><div class="stat-label">交易市场</div></div>
+    <div class="stat"><div class="stat-value">5+</div><div class="stat-label">行业覆盖</div></div>
+    <div class="stat"><div class="stat-value">24/7</div><div class="stat-label">智能运行</div></div>
+  </div>
+</div>
+
+<div class="data-source">
+  <span>📊 数据来源：Baostock · 更新时间：2026-03-20 22:00</span>
+  <span>*以上为历史回测数据，不代表未来收益</span>
+</div>
+
+<div class="grid">
+
+  <!-- 市场行情 -->
+  <div class="card">
+    <h2>📊 今日市场 (2026-03-20)</h2>
+    <div class="card-grid">
+
+      <div class="metric">
+        <div class="metric-value">3957.0527</div>
+        <div class="metric-label">上证指数</div>
+        <div class="metric-value" style="font-size:16px;color:#ef5350">▼ -1.24%</div>
+      </div>
+
+      <div class="metric">
+        <div class="metric-value">13866.2022</div>
+        <div class="metric-label">深证成指</div>
+        <div class="metric-value" style="font-size:16px;color:#ef5350">▼ -0.25%</div>
+      </div>
+
+      <div class="metric">
+        <div class="metric-value">3352.1026</div>
+        <div class="metric-label">创业板指</div>
+        <div class="metric-value" style="font-size:16px;color:#26a69a">▲ 1.30%</div>
+      </div>
+
+      <div class="metric">
+        <div class="metric-value">4567.0179</div>
+        <div class="metric-label">沪深300</div>
+        <div class="metric-value" style="font-size:16px;color:#ef5350">▼ -0.35%</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 策略绩效 -->
+  <div class="card">
+    <h2>📈 策略绩效 (2025-01 至 2026-03)</h2>
+    <div class="card-grid">
+      <div class="metric"><div class="metric-value" style="color:#26a69a">+45.8%</div><div class="metric-label">总收益率</div></div>
+      <div class="metric"><div class="metric-value" style="color:#26a69a">+31.5%</div><div class="metric-label">年化收益</div></div>
+      <div class="metric"><div class="metric-value" style="color:#ef5350">-12.3%</div><div class="metric-label">最大回撤</div></div>
+      <div class="metric"><div class="metric-value">1.58</div><div class="metric-label">夏普比率</div></div>
+      <div class="metric"><div class="metric-value">62%</div><div class="metric-label">胜率</div></div>
+      <div class="metric"><div class="metric-value" style="color:#c9a227">A+</div><div class="metric-label">风险等级</div></div>
+    </div>
+  </div>
+
+  <!-- 交易信号 -->
+  <div class="card" id="signals">
+    <h2>🎯 今日交易信号</h2>
+    <div class="signal">
+      <div class="signal-type">🟢 买入 AI算力</div>
+      <div class="signal-stocks">寒武纪、中际旭创</div>
+      <div class="signal-reason">触发: 均线多头+量价齐升</div>
+    </div>
+    <div class="signal">
+      <div class="signal-type">🟡 持有 新能源锂电</div>
+      <div class="signal-stocks">宁德时代、比亚迪</div>
+      <div class="signal-reason">触发: 政策受益+业绩验证</div>
+    </div>
+    <div class="signal">
+      <div class="signal-type">🔵 观察 商业航天</div>
+      <div class="signal-stocks">中国卫通、航天电子</div>
+      <div class="signal-reason">触发: 两会将至+政策催化</div>
+    </div>
+    <div class="signal">
+      <div class="signal-type">🔴 减仓 银行板块</div>
+      <div class="signal-stocks">招商银行</div>
+      <div class="signal-reason">触发: 防御降仓</div>
+    </div>
+  </div>
+
+  <!-- 风控中心 -->
+  <div class="card" id="risk">
+    <h2>🛡️ 风控中心</h2>
+    <div class="risk">
+      <div class="risk-item"><div class="risk-status">✅</div><div class="risk-label">数据审计</div><div style="font-size:11px;color:#26a69a">通过</div></div>
+      <div class="risk-item"><div class="risk-status">✅</div><div class="risk-label">仓位检查</div><div style="font-size:11px;color:#26a69a">合规</div></div>
+      <div class="risk-item"><div class="risk-status">✅</div><div class="risk-label">止损线</div><div style="font-size:11px;color:#ef5350">-10%</div></div>
+      <div class="risk-item"><div class="risk-status">✅</div><div class="risk-label">风控官</div><div style="font-size:11px;color:#c9a227">德隆</div></div>
+    </div>
+    <div style="margin-top:12px;font-size:12px;color:#5a6a7a;background:#0d1f35;padding:10px;border-radius:8px;">
+      <b style="color:#c9a227">风控官:</b> 德隆 | <b style="color:#c9a227">审计频率:</b> 每次报告发布前 | <b style="color:#c9a227">异常阈值:</b> ±30%
+    </div>
+  </div>
+
+  <!-- 核心团队 -->
+  <div class="card" id="team">
+    <h2>👥 核心团队</h2>
+    <div class="team">
+      <div class="member">
+        <div class="member-name">🧠 卡特 (Carter)</div>
+        <div class="member-role">CEO · 第七维度智能体</div>
+        <div class="member-desc">决策委员会主任，负责最终投资决策</div>
+      </div>
+      <div class="member">
+        <div class="member-name">📊 发哥 (Fage)</div>
+        <div class="member-role">资讯大师 · 策略工程</div>
+        <div class="member-desc">全球资讯收集、策略回测、系统安全</div>
+      </div>
+      <div class="member">
+        <div class="member-name">⭐ 星星 (Xingxing)</div>
+        <div class="member-role">投研大师</div>
+        <div class="member-desc">基本面分析、投研报告、信号验证</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 投资决策体系 -->
+  <div class="card" id="strategies">
+    <h2>📋 投资决策体系</h2>
+    <div style="font-size:13px;color:#8ba3c7;line-height:1.8;">
+      <div style="margin-bottom:8px;"><b style="color:#c9a227">营收CAGR></b>30% | 净利润CAGR>25%</div>
+      <div style="margin-bottom:8px;"><b style="color:#c9a227">行业景气度 (20%)</b> 上升周期 | 政策支持 | 供需紧张</div>
+      <div style="margin-bottom:8px;"><b style="color:#c9a227">技术面 (15%)</b> 趋势向上 | 均线支撑 | 形态健康</div>
+      <div style="margin-bottom:8px;"><b style="color:#c9a227">情绪面 (10%)</b> 机构持仓 | 分析师预期 | 市场关注</div>
+    </div>
+    <div style="margin-top:12px;background:#0d1f35;padding:12px;border-radius:8px;font-size:12px;">
+      <b style="color:#c9a227">风控规则</b><br>
+      单票≤20% | 止损-10% | 止盈+30%<br><br>
+      <b style="color:#c9a227">评分等级:</b><br>
+      ⭐⭐⭐⭐⭐(90-100分) 重仓<br>
+      ⭐⭐⭐⭐(75-89分) 正常配置<br>
+      ⭐⭐⭐(60-74分) 轻仓观察
+    </div>
+  </div>
+
+  <!-- Agent矩阵 -->
+  <div class="card">
+    <h2>🤖 Agent矩阵</h2>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;font-size:13px;color:#8ba3c7;">
+      <div style="background:#0d1f35;padding:12px;border-radius:8px;">
+        <div style="color:#c9a227;font-weight:700;margin-bottom:4px;">🧠 卡特 (Carter)</div>
+        CEO · 决策中枢<br>架构设计/最终决策
+      </div>
+      <div style="background:#0d1f35;padding:12px;border-radius:8px;">
+        <div style="color:#c9a227;font-weight:700;margin-bottom:4px;">📊 发哥 (Fage)</div>
+        资讯大师 · 执行<br>资讯收集/系统实现
+      </div>
+      <div style="background:#0d1f35;padding:12px;border-radius:8px;">
+        <div style="color:#c9a227;font-weight:700;margin-bottom:4px;">⭐ 星星 (Xingxing)</div>
+        投研大师 · 分析<br>基本面/信号验证
+      </div>
+      <div style="background:#0d1f35;padding:12px;border-radius:8px;">
+        <div style="color:#c9a227;font-weight:700;margin-bottom:4px;">🔧 自动 (Auto)</div>
+        系统大师 · 运维<br>CI-CD/监控/自动化
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="footer" id="contact">
+  <div class="brand">ROBIN.COM</div>
+  <p>智能体量化投资平台 | 让 ROBIN.COM 成为全人类最强大的组织</p>
+  <p style="margin-top:10px;">
+    <a href="mailto:contact@robinng668.com" style="color:#c9a227;">contact@robinng668.com</a>
+    &nbsp;|&nbsp;
+    内部资料 仅供参考 不构成投资建议
+  </p>
+  <p style="margin-top:15px;color:#3a4a5a;">Copyright © 2026 ROBIN.COM All Rights Reserved</p>
+</div>
+
+</body>
+</html>
